@@ -1,6 +1,6 @@
-1. Login to AWS console.
+## 1. Login to AWS console.
 
-2. Create IAM user for deployment
+## 2. Create IAM user for deployment
 
 	with specific access
 	1. EC2 access : It is virtual machine
@@ -21,13 +21,13 @@
 	2. AmazonEC2FullAccess
 
 	
-3. Create ECR repo to store/save docker image
+## 3. Create ECR repo to store/save docker image
     - Save the URI: 315865595366.dkr.ecr.us-east-1.amazonaws.com/simple-app
 
 	
-4. Create EC2 machine (Ubuntu) 
+## 4. Create EC2 machine (Ubuntu) 
 
-5. Open EC2 and Install docker in EC2 Machine:
+## 5. Open EC2 and Install docker in EC2 Machine:
 	
 	
 	#optinal
@@ -40,12 +40,12 @@
 	sudo usermod -aG docker ubuntu
 	newgrp docker
 	
-6. Configure EC2 as self-hosted runner:
+## 6. Configure EC2 as self-hosted runner:
     setting>actions>runner>new self hosted runner> choose os> 
     then run command one by one
 
 
-7. Setup github secrets:
+## 7. Setup github secrets:
 
     AWS_ACCESS_KEY_ID=
 
