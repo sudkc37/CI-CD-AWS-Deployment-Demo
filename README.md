@@ -1,3 +1,5 @@
+The workflow outlines a CI/CD pipeline using GitHub Actions with Docker, ECR, and EC2 for continuous integration and deployment.
+
 ## 1. Login to AWS console.
 
 ## 2. Create IAM user for deployment
