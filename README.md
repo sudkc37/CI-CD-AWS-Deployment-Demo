@@ -1,4 +1,4 @@
-The workflow outlines a CI/CD pipeline using GitHub Actions with Docker, ECR, and EC2 for continuous integration and deployment.
+The workflow outlines a CI/CD pipeline using GitHub Actions with Docker, ECR, and EC2 for continuous integration and deployment of very simple application.
 
 ## 1. Login to AWS console.
 
