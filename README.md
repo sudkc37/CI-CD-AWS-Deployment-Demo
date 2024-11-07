@@ -1,4 +1,26 @@
 The workflow outlines a CI/CD pipeline using GitHub Actions with Docker, ECR, and EC2 for continuous integration and deployment of very simple application.
+## WorkFlow Explaination:
+
+## Basic Workflow:
+1. The workflow starts automatically when code is pushed to the main branch, except when only the README.md file is changed.
+2. The workflow uses GitHub's permissions to allow it to read the repository and manage AWS authentication.
+## Continuous Integration (CI) Stage:
+3. GitHub Actions checks out the latest code from the repository to ensure all steps are working with the current version.
+4. The workflow runs a linting step to check for any syntax or style issues in the code.
+5. The workflow executes unit tests to verify that individual parts of the code are functioning correctly.
+## Continuous Delivery (CD) Stage:
+6. Essential utilities like jq and unzip are installed, if needed, for the build process.
+7. AWS credentials are configured using GitHub Secrets to authenticate with Amazon services.
+8. GitHub Actions authenticates with Amazon Elastic Container Registry (ECR) to allow Docker images to be pushed.
+9. The Docker image is built from the code and tagged with the latest label.
+10. The built Docker image is pushed to ECR, making it available for deployment.
+## Continuous Deployment Stage: 
+11. The EC2 instance pulls the latest Docker image from Amazon ECR.
+12.  If an existing container with the same name is running, it is stopped and removed to prevent conflicts.
+13.  The new Docker container is launched on the EC2 instance, making the application available to users. AWS credentials and configuration are passed as environment variables for seamless operation.
+14.  Unused Docker images and containers are removed to free up disk space on the EC2 instance.
+    
+AWS SetUP:
 
 ## 1. Login to AWS console.
 
